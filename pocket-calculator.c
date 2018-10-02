@@ -60,7 +60,7 @@ void divide()
 {
 
 }
-void readOperand(int &numb1, int &numb2)
+void readOperand(int* numb1, int* numb2)
 {
   printf("Please enter the first operand:");
   numb1=scanf("%lf\n");
