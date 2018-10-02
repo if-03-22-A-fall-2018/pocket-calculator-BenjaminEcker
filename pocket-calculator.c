@@ -43,24 +43,33 @@ void printMenu()
 }
 void add()
 {
-   int operand1;
-   int operand2;
+   double operand1;
+   double operand2;
    readOperand(&operand1, &operand2);
    printf("Sum :%d",operand1+operand2);
 }
 void subtract()
 {
-
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%d",operand1-operand2);
 }
 void multiply()
 {
-
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%d",operand1*operand2);
 }
 void divide()
 {
-
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%d",operand1/operand2);
 }
-void readOperand(int* numb1, int* numb2)
+void readOperand(double* numb1, double* numb2)
 {
   printf("Please enter the first operand:");
   numb1=scanf("%lf\n");
