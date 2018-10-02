@@ -43,7 +43,9 @@ void printMenu()
 }
 void add()
 {
-   int 
+   int operand1;
+   int operand2;
+   readOperand(* operand1,* operand2)
 }
 void subtract()
 {
@@ -56,4 +58,11 @@ void multiply()
 void divide()
 {
 
+}
+void readOperand(int* numb1,int* numb2)
+{
+  printf("Please enter the first operand:");
+  numb1=scanf("%lf\n");
+  printf("Please enter the second operand:");
+  numb2=scanf("%lf\n");
 }
