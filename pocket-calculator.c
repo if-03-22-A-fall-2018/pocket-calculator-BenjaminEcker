@@ -46,7 +46,7 @@ void add()
    int operand1;
    int operand2;
    readOperand(&operand1, &operand2);
-   printf("Sum :%lf",operand1+operand2);
+   printf("Sum :%d",operand1+operand2);
 }
 void subtract()
 {
@@ -60,7 +60,7 @@ void divide()
 {
 
 }
-void readOperand(int &numb1,int &numb2)
+void readOperand(int &numb1, int &numb2)
 {
   printf("Please enter the first operand:");
   numb1=scanf("%lf\n");
