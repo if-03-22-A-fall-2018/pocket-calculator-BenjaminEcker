@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <float.h>
+#include "calculator.h"
 
 void printMenu()
 {
@@ -13,6 +15,11 @@ void add()
    double operand1;
    double operand2;
    readOperand(&operand1, &operand2);
+
+   if (((operand1+operand2)<operand2)||((operand1+operand2)<operand1))
+   {
+     printf("Stackoverflow");
+   }
    printf("Sum :%f",operand1+operand2);
 }
 void subtract()
@@ -20,6 +27,10 @@ void subtract()
   double operand1;
   double operand2;
   readOperand(&operand1, &operand2);
+  if (((operand1-operand2)>operand2)||((operand1-operand2)>operand1))
+  {
+    printf("Stackoverflow");
+  }
   printf("Sum :%f",operand1-operand2);
 }
 void multiply()
@@ -39,9 +50,9 @@ void divide()
 void readOperand(double* numb1, double* numb2)
 {
   printf("Please enter the first operand:");
-  numb1=scanf("%lf\n");
+  scanf("%lf\n",numb1);
   printf("Please enter the second operand:");
-  numb2=scanf("%lf\n");
+  scanf("%lf\n",numb2);
 }
 
  int main(int argc, char const *argv[])
