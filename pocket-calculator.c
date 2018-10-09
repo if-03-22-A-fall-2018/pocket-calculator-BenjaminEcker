@@ -1,5 +1,49 @@
 #include <stdio.h>
 
+void printMenu()
+{
+  printf("Add          (1)\n");
+  printf("Subtract     (2)\n");
+  printf("Multiply     (3)\n");
+  printf("Divide       (4)\n");
+  printf("Stop program (-1)\n");
+}
+void add()
+{
+   double operand1;
+   double operand2;
+   readOperand(&operand1, &operand2);
+   printf("Sum :%f",operand1+operand2);
+}
+void subtract()
+{
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%f",operand1-operand2);
+}
+void multiply()
+{
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%f",operand1*operand2);
+}
+void divide()
+{
+  double operand1;
+  double operand2;
+  readOperand(&operand1, &operand2);
+  printf("Sum :%f",operand1/operand2);
+}
+void readOperand(double* numb1, double* numb2)
+{
+  printf("Please enter the first operand:");
+  numb1=scanf("%lf\n");
+  printf("Please enter the second operand:");
+  numb2=scanf("%lf\n");
+}
+
  int main(int argc, char const *argv[])
  {
    int choice;
@@ -33,46 +77,3 @@
      break;
    }
  }
-void printMenu()
-{
-  printf("Add          (1)\n");
-  printf("Subtract     (2)\n");
-  printf("Multiply     (3)\n");
-  printf("Divide       (4)\n");
-  printf("Stop program (-1)\n");
-}
-void add()
-{
-   double operand1;
-   double operand2;
-   readOperand(&operand1, &operand2);
-   printf("Sum :%d",operand1+operand2);
-}
-void subtract()
-{
-  double operand1;
-  double operand2;
-  readOperand(&operand1, &operand2);
-  printf("Sum :%d",operand1-operand2);
-}
-void multiply()
-{
-  double operand1;
-  double operand2;
-  readOperand(&operand1, &operand2);
-  printf("Sum :%d",operand1*operand2);
-}
-void divide()
-{
-  double operand1;
-  double operand2;
-  readOperand(&operand1, &operand2);
-  printf("Sum :%d",operand1/operand2);
-}
-void readOperand(double* numb1, double* numb2)
-{
-  printf("Please enter the first operand:");
-  numb1=scanf("%lf\n");
-  printf("Please enter the second operand:");
-  numb2=scanf("%lf\n");
-}
